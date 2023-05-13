@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('reg_no');
+            $table->softDeletesTz();
             $table->timestamps();
         });
     }
