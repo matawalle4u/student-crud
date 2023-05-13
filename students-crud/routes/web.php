@@ -38,3 +38,20 @@ Route::get('students/{id}/delete', [StudentController::class, 'destroy'])
 
 Route::post('students/{id}/add-course', [StudentController::class, 'addCourse'])
     ->whereNumber('id');
+
+Route::get('courses', [CourseController::class, 'index']);
+Route::post('courses', [CourseController::class, 'store']);
+Route::get('courses/create', [CourseController::class, 'create']);
+    
+Route::get('courses/{id}', [CourseController::class, 'show'])
+        ->whereNumber('id');
+    
+Route::post('courses/{id}', [CourseController::class, 'update'])
+        ->whereNumber('id');
+    
+Route::get('courses/{id}/edit', [CourseController::class, 'edit'])
+        ->whereNumber('id');
+    
+Route::get('courses/{id}/delete', [CourseController::class, 'destroy'])
+        ->whereNumber('id');
+    
