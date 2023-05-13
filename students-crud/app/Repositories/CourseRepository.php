@@ -19,6 +19,18 @@
         public function findAll(): Collection{
             return Course::all();
         }
+
+        public function listAddable(int $studentId): Collection
+    {
+        return Course::query()
+            ->whereNotIn('id', function (Builder $builder) use ($studentId) {
+                $builder->select('id')
+                    ->from('student_courses')
+                    ->where('student_courses.student_id', $studentId)
+                    ->whereNull('student_courses.deleted_at');
+            })
+            ->get();
+    }
         
         public function findById(int $id): Model|Course|null{
             return Course::query()->find($id);
@@ -44,7 +56,7 @@
         }
 
         public function delete(int $id): void{
-            
+
             $course = $this->findRequiredById($id);
             $course->delete();
         }
