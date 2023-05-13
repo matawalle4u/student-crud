@@ -11,7 +11,7 @@ class CoursePostRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,8 @@ class CoursePostRequest extends FormRequest
     {
         return [
             //
+            'name' => 'required|string|min:3|max:150',
+            'code' => 'required|string|min:3|max:150',
         ];
     }
 }
