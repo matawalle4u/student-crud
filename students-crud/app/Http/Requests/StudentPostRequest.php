@@ -23,6 +23,9 @@ class StudentPostRequest extends FormRequest
     {
         return [
             //
+            'first_name' => 'required|string|min:3|max:150',
+            'last_name' => 'required|string|min:3|max:150',
+            'reg_no' => 'required|string|min:3|max:150',
         ];
     }
 }
