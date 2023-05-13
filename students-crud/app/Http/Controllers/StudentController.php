@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Http\Requests\StudentCoursePostRequest;
+use App\Http\Requests\StudentPostRequest;
+use App\Http\Requests\StudentPutRequest;
 use App\Repositories\CourseRepository;
 use App\Repositories\StudentCourseRepository;
 use App\Repositories\StudentRepository;
