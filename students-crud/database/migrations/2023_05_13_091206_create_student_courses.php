@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('student_courses', function (Blueprint $table) {
             $table->id();
+            
+            $table->foreignId('student_id')
+                ->constrained('students');
+
+            $table->foreignId('course_id')
+                ->constrained('courses');
+
+            $table->softDeletesTz();
             $table->timestamps();
         });
     }
