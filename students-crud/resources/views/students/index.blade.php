@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@livewireStyles
     <div class="container-fluid mt-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-5">
@@ -11,6 +12,8 @@
                         <li class="breadcrumb-item active" aria-current="page">Student CRUD application</li>
                     </ol>
                 </nav>
+
+                <input type="text" name="search" wire:model="price" class="form-control" placeholder="Enter a search key to search students">
 
                 <div class="card mt">
                     <div class="card-header d-flex justify-content-between">
@@ -34,4 +37,5 @@
             </div>
         </div>
     </div>
+@livewireScripts
 @endsection
