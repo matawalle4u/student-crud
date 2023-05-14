@@ -5,8 +5,12 @@ The app performs the following
 - Search Student and courses
 
 ## Instruction
+- Install composer for package management
 
 ## Installation
+- Clone the repo by executing `git@github.com:pitch-cardinal-coding/matawalle4u.git`
+- navigate into the directory by `cd students-crud`
+- Create .env file by running `cp .env.example .env`
 
 ## Usage
 
