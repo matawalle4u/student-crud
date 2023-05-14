@@ -4,7 +4,8 @@
     <div class="container-fluid mt-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-5">
-                <div class="card">
+                <livewire:student />
+                <div class="card mt-2">
                     <div class="card-header">Student CRUD application</div>
                     <div class="card-body">
                         <div class="list-group">

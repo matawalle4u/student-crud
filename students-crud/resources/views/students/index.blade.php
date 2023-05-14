@@ -13,8 +13,7 @@
                     </ol>
                 </nav>
 
-                <input type="text" name="search" wire:model="price" class="form-control" placeholder="Enter a search key to search students">
-
+                
                 <div class="card mt">
                     <div class="card-header d-flex justify-content-between">
                         <div>Students</div>
