@@ -13,5 +13,11 @@ The app performs the following
 - Create .env file by running `cp .env.example .env`
 
 ## Usage
+- Build the docker container by executing `COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 ./vendor/bin/sail build`
+- Start the laravel-sail by running `./vendor/bin/sail up`
+- Generate laravel project key by running `./vendor/bin/sail artisan key:generate`
+- Run laravel migration by `./vendor/bin/sail artisan migrate --force`
 
 ## Further Reading
+- https://laravel-livewire.com
+- 
