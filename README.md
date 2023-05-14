@@ -5,7 +5,8 @@ The app performs the following
 - Search Student and courses
 
 ## Instruction
-- Install composer for package management
+- Ensure to have composer for package management
+- Ensure you have docker installed on your computer
 
 ## Installation
 - Clone the repo by executing `git@github.com:pitch-cardinal-coding/matawalle4u.git`
@@ -19,5 +20,6 @@ The app performs the following
 - Run laravel migration by `./vendor/bin/sail artisan migrate --force`
 
 ## Further Reading
+- https://laravel.com/
 - https://laravel-livewire.com
-- 
+- https://pestphp.com/
