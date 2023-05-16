@@ -1,8 +1,7 @@
 import { defineConfig } from 'cypress'
-import a from './tests/cypress/plugins/index.js'
-
 
 export default defineConfig({
+    
     chromeWebSecurity: false,
     retries: 2,
     defaultCommandTimeout: 5000,
@@ -11,11 +10,19 @@ export default defineConfig({
     screenshotsFolder: 'tests/cypress/screenshots',
     fixturesFolder: 'tests/cypress/fixture',
     e2e: {
+
         setupNodeEvents(on, config) {
-            return a(on, config)
+           
+            on('task', {
+                log(message) {
+                  console.log(message)
+        
+                  return null
+                },
+            });
             
         },
-        baseUrl: 'http://localhost',
+        baseUrl: 'http://127.0.0.1:8000',
         specPattern: 'tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
         supportFile: 'tests/cypress/support/index.js',
     },
