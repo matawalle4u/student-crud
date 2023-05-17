@@ -8,8 +8,6 @@ describe('Create Student', ()=>{
         cy.get('input#last_name').type('Testing')
         cy.get('input#reg_no').type('reg001')
         cy.get('button#create_std').click()
-
-        
         
       });
 
