@@ -50,13 +50,13 @@ RUN apt-get update \
     && apt-get install -y wget \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
-RUN apt-get update && apt-get install -y \
-    git \
-    libc6-dev \
-    libsasl2-dev \
-    libsasl2-modules \
-    libssl-dev \
-    sudo
+# RUN apt-get update && apt-get install -y \
+#     git \
+#     libc6-dev \
+#     libsasl2-dev \
+#     libsasl2-modules \
+#     libssl-dev \
+#     sudo
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -82,9 +82,9 @@ RUN chmod -R 777 /var
 # RUN chmod -R 777 /run/php
 # RUN sed -i "s/listen = \/run\/php\/php8.1-fpm.sock.*/listen = 127.0.0.1:9000/g" /etc/php/8.1/fpm/pool.d/www.conf
 
-RUN composer require laravel/sail --dev
-RUN php artisan sail:install
-RUN ./vendor/bin/sail up
+# RUN composer require laravel/sail --dev
+# RUN php artisan sail:install
+# RUN ./vendor/bin/sail up
 
 
 EXPOSE 8000
