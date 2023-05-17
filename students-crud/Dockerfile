@@ -82,6 +82,9 @@ RUN chmod -R 777 /var
 # RUN chmod -R 777 /run/php
 # RUN sed -i "s/listen = \/run\/php\/php8.1-fpm.sock.*/listen = 127.0.0.1:9000/g" /etc/php/8.1/fpm/pool.d/www.conf
 
+RUN composer require laravel/sail --dev
+RUN php artisan sail:install
+RUN ./vendor/bin/sail up
 
 
 EXPOSE 8000
