@@ -40,7 +40,7 @@
                                 @enderror
                             </div>
                             <div class="text-end mt-2">
-                                <button class="btn btn-primary">Update Course</button>
+                                <button id="update_btn" class="btn btn-primary">Update Course</button>
                             </div>
 
                         </form>

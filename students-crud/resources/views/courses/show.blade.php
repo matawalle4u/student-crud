@@ -28,8 +28,8 @@
                             </div>
 
                             <div class="mt-3 text-end">
-                                <a href="/courses/{{$course['id']}}/edit" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="/courses/{{$course['id']}}/delete" class="btn btn-sm btn-danger">Delete</a>
+                                <a id="edit_course" href="/courses/{{$course['id']}}/edit" class="btn btn-sm btn-primary">Edit</a>
+                                <a id="delete_course" href="/courses/{{$course['id']}}/delete" class="btn btn-sm btn-danger">Delete</a>
                             </div>
                         @else
                             <div class="alert alert-warning">

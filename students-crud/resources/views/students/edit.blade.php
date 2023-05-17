@@ -49,7 +49,7 @@
                                 @enderror
                             </div>
                             <div class="text-end mt-2">
-                                <button class="btn btn-primary">Update Student</button>
+                                <button id="edit_student" class="btn btn-primary">Update Student</button>
                             </div>
 
                         </form>

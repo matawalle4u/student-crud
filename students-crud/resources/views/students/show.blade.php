@@ -31,8 +31,8 @@
                             </div>
 
                             <div class="mt-3 text-end">
-                                <a href="/students/{{$student['id']}}/edit" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="/students/{{$student['id']}}/delete" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="/students/{{$student['id']}}/edit" id="edit_std" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="/students/{{$student['id']}}/delete" id="delete_std" class="btn btn-sm btn-danger">Delete</a>
                             </div>
                         @else
                             <div class="alert alert-warning">
