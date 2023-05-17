@@ -78,7 +78,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-1">
-                                    <button type="submit" class="btn btn-primary">Add</button>
+                                    <button id="add_std_crs" type="submit" class="btn btn-primary">Add</button>
                                 </div>
                             </div>
                         </form>
