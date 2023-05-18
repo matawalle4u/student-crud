@@ -38,6 +38,9 @@ Route::get('students/{id}/edit', [StudentController::class, 'edit'])
 Route::get('students/{id}/delete', [StudentController::class, 'destroy'])
     ->whereNumber('id');
 
+Route::get('student-courses/{id}/delete', [StudentController::class, 'removeCourse'])
+    ->whereNumber('id');
+
 Route::post('students/{id}/add-course', [StudentController::class, 'addCourse'])
     ->whereNumber('id');
 
