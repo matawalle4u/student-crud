@@ -9,7 +9,6 @@ services:
             - "19000:80"
         volumes:
             - ./_dev/config/servers/:/etc/nginx/conf.d/
-            - ./:/var/www/projects
 
     php:
         build:
@@ -17,8 +16,7 @@ services:
             context: .
         image: php8.2-fpm
         container_name: student-management-php
-        volumes:
-            - ./:/var/www/projects
+        
         ports:
             - "9000:9000"
 
