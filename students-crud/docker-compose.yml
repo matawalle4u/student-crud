@@ -1,36 +1,29 @@
 version: "3.9"
+
+
 services:
     web-server:
-        image: nginx:1.21.1
-        platform: linux/x86_64
+        image: nginx:1.23.4
         container_name: student-management-nginx
         ports:
-            - "80:80"
-            - "443:443"
-        networks:
-            - web-dev
+            - "19000:80"
         volumes:
             - ./_dev/config/servers/:/etc/nginx/conf.d/
             - ./:/var/www/projects
-            - ./_dev/config/ssl/:/var/www/ssl
 
     php:
         build:
             dockerfile: Dockerfile
             context: .
         image: php8.2-fpm
-        platform: linux/x86_64
         container_name: student-management-php
         volumes:
             - ./:/var/www/projects
         ports:
             - "9000:9000"
-        networks:
-            - web-dev
 
     db:
         image: mysql:8.0.26
-        platform: linux/x86_64
         container_name: student-management-mysql
         volumes:
             - ./_dev/config/mysql_db:/var/lib/mysql
@@ -42,9 +35,3 @@ services:
             MYSQL_PASSWORD: "${DB_PASSWORD}"
         ports:
             - "3308:3306"
-        networks:
-            - web-dev
-
-networks:
-    web-dev:
-        driver: bridge
