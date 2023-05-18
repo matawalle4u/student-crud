@@ -15,14 +15,17 @@ The app performs the following
 -  Assign courses to students
 -  Remove course assignment
 
-## Instruction
-- Ensure to have composer installed for package management
-- Ensure you have docker installed on your computer
+## Tools
+- composer (for package management)
+- Docker
+- docker-compose
 
 ## Installation
 - Clone the repo by executing `git@github.com:pitch-cardinal-coding/matawalle4u.git`
 - navigate into the directory by `cd students-crud`
 - Create .env file by running `cp .env.example .env`
+- Configure your .env file
+- Build with docker by running `docker-compose up`
 
 ## Usage
 - Build the docker container by executing `COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 ./vendor/bin/sail build`
