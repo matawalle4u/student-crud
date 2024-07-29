@@ -21,7 +21,7 @@ The app performs the following
 - docker-compose
 
 ## Installation
-- Clone the repo by executing `git@github.com:pitch-cardinal-coding/matawalle4u.git`
+- Clone the repo by executing `git@github.com:matawalle4u/student-crud.git`
 - navigate into the directory by `cd students-crud`
 - Create .env file by running `cp .env.example .env`
 - Configure your .env file
